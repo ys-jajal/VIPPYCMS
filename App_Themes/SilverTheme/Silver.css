@@ -1,0 +1,37 @@
+﻿body {
+}
+
+html
+{
+    background-color:Silver;
+    
+}
+#Div1
+{
+    background-color:Silver;
+}
+.sidebar li {
+}
+
+.sidebar li ul {
+}
+
+.sidebar li li {
+	padding: 6px 0 6px 10px;
+	background: url(4Images/img08.gif) no-repeat 0 12px;
+	border-bottom: 1px solid #2872A6;
+}
+
+.sidebar li li a {
+	text-decoration: none;
+	color:Black;
+}
+
+.sidebar li li a:hover {
+	color: #FFFFFF;
+}
+
+.sidebar li h2 {
+	padding-top: 20px;
+	color: yellow;
+}

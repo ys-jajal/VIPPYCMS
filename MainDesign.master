@@ -1,0 +1,553 @@
+﻿<%@ Master Language="VB" CodeFile="MainDesign.master.vb" Inherits="MainDesign" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    
+    <style type="text/css">
+       .hp
+        {
+            background-color:transparent;
+            margin-top:2px;
+            width:150px;
+            height:10px;
+            color:White;
+            text-align:center;
+            text-transform:capitalize;            
+        }
+        .mn
+        {
+        background: #0F5B96 url(4Images/img01.gif) repeat-x;
+            height:144px;
+            width:950px;
+             position:fixed ;
+          }
+        .left1
+        {
+             margin-top:144px;          
+          background: #0F5B96 url(4Images/img01.gif) repeat-x;
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 13px;
+	        color: #A4E4F5;
+            width:950px;
+            height:1200px;
+            float:left;
+            
+        }
+        .right
+        {
+            background-image:url(Images/rightpanel.png);
+            width:150px;
+            height:565px;
+            margin-left:960px;
+            position:fixed;
+        }
+
+        h1, h2, h3 
+        {
+	        font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+        }
+
+        h1, h2 
+        {
+	        text-transform: lowercase;
+	        font-weight: normal;
+        }
+
+        h1 
+        {
+	        letter-spacing: -2px;
+    	    font-size: 2.4em;
+        }
+
+     h2
+     {
+	    letter-spacing: -1px;
+	    font-size: 1.8em;
+        height: 78px;
+        margin-bottom: 0px;
+     }
+
+p, ol, ul {
+	margin-bottom: 1.5em;
+	line-height: 150%;
+}
+
+a {
+	color: #A4E4F5;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+img.left {
+	float: left;
+	margin: 4px 20px 0 0;
+}
+
+/* Header */
+
+#header {
+	height: 150px;
+	background: url(4Images/img02.jpg) no-repeat center top;
+	text-transform: lowercase;
+          
+        }
+
+#logo {
+	float: left;
+	
+}
+
+#logo h1, #logo p {
+	float: left;
+	margin: 0;
+	line-height: normal;
+}
+
+#logo h1 {
+	padding: 47px 0 0 20px;
+	font-size: 3em;
+	color: #62D6F5;
+}
+
+#logo p {
+	padding: 69px 0 0 7px;
+	letter-spacing: -1px;
+	font-size: 1.4em;
+	color: #199DD2;
+}
+
+#logo a {
+	text-decoration: none;
+	color: #62D6F5;
+}
+
+#menu {
+	float:right;
+	
+}
+
+#menu ul {
+	margin: 0;
+	padding: 60px 20px 0 0;
+	list-style: none;
+}
+
+#menu li {
+	display: inline;
+}
+
+#menu a {
+	float: left;
+	width: 120px;
+	height: 56px;
+	margin: 0 0 0 2px;
+	padding: 9px 0 0 0;
+	background: #1B97CE url(4Images/img03.gif) no-repeat;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: -1px;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #000000;
+}
+
+#menu a:hover, #menu .current_page_item a {
+	background: #26BADF url(4Images/img04.gif) no-repeat;
+}
+
+/* Content */
+
+#content {
+	margin-left:180px;
+	width: 530px;
+	padding: 0 0 0 25px;
+}
+
+.post {
+	margin-bottom: 15px;
+	background: #1EB5DD url(4Images/img05.gif) no-repeat;
+	color: #0A416B;
+}
+
+.post a {
+	color: #A4E4F5;
+}
+
+.post a:hover {
+	color: #FFFFFF;
+}
+
+.post .title {
+	margin: 0;
+	padding: 30px 30px 0 30px;
+}
+
+.post .title a {
+	text-decoration: none;
+	color: #0A416B;
+}
+
+.post .byline {
+	margin: 0;
+	padding: 0 30px;
+}
+
+.post .entry {
+	padding: 20px 30px 10px 30px;
+}
+
+.post .links {
+	margin: 0;
+	padding: 10px 30px 35px 30px;
+	background: url(4Images/img06.gif) repeat-x left bottom;
+	border-top: 1px solid #2872A6;
+}
+
+.post .links a {
+	padding-left: 10px;
+	background: url(4Images/img08.gif) no-repeat left center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #0A416B;
+}
+
+.post .links a:hover {
+	color: #FFFFFF;
+}
+      .left2
+        {
+        	background: #C3C3C3 url(5Images/img01.gif) repeat-x;
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 13px;
+	        color: #666666;
+            width:950px;
+            height:1200px;
+            float:left;
+        }
+ /* Header */
+
+#header1 {
+	height: 132px;
+	width:950px;
+ 	text-transform: uppercase;
+	background-color:White;
+	position:fixed;
+}
+
+#logo1 {
+	float: left;
+	padding: 24px 0 0 20px;
+}
+
+#logo1 h1, #logo p {
+	margin: 0;
+	font-weight: bold;
+}
+
+#logo1 h1 {
+}
+
+#logo1 p {
+	padding-left: 1px;
+	line-height: normal;
+	font-size: .85em;
+}
+
+#menu1{
+	float: right;
+	padding-top: 24px;
+}
+
+#menu1 ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	line-height: normal;
+}
+
+#menu1 li {
+	display: inline;
+}
+
+#menu1 a {
+	display: block;
+	float: left;
+	padding: 31px 20px;
+	text-decoration: none;
+	font-size: .85em;
+	font-weight: bold;
+}
+
+#menu1 a:hover {
+	text-decoration: underline;
+}
+
+#menu1 .current_page_item a {
+	background: #C3C3C3 url(5Images/img02.gif) repeat-x;
+}
+
+
+#content1 {
+	width: 650px;
+	margin:135px 0 0 150px;
+}
+
+.post1 {
+}
+
+.meta1 {
+	margin: 0;
+	padding: 10px 0 15px 20px;
+	border-top: 1px solid #F3F3F3;
+}
+
+.meta1 a {
+	text-decoration: none;
+}
+
+.meta1 a:hover {
+	text-decoration: underline;
+}
+
+.meta1 .more {
+	padding-left: 12px;
+	background: url(5Images/img09.gif) no-repeat left center;
+}
+
+.meta1 .comments {
+	padding-left: 15px;
+	background: url(5Images/img10.gif) no-repeat left center;
+}
+
+.greenbox1 {
+	background: #FFFFFF url(5Images/img03.gif) repeat-x;
+}
+
+.greenbox1 .title {
+	height: 60px;
+	background: url(5Images/img04.gif) no-repeat;
+}
+
+.greenbox1 .title h1, .greenbox .title h2 {
+	height: 35px;
+	margin: 0;
+	padding: 15px 0 0 20px;
+	background: url(5Images/img05.gif) no-repeat right top;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-size: 1.6em;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.greenbox1 .entry {
+	padding: 10px 20px 0 20px;
+	border-left: 1px solid #FFFFFF;
+	border-right: 1px solid #FFFFFF;
+}
+
+.btm1 { background: url(5Images/img06.gif) repeat-x left bottom; }
+.btm1 .l { background: url(5Images/img07.gif) no-repeat left bottom; }
+.btm1 .r { background: url(5Images/img08.gif) no-repeat right bottom; }
+
+
+.left3
+{
+    background: #36393D url(2images/img01.gif) repeat-x;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	color: #D1E9A3;
+    width:950px;
+    height:1200px;
+    float:left;
+}
+
+#header2 {
+	width: 950px;
+	height: 140px;
+	margin: 0 auto;
+	background: #D1E9A3 url(2images/img02.gif) repeat-x;
+	position:fixed;
+}
+
+#logo2 {
+	float: left;
+	height: 100px;
+	padding: 0 0 0 115px;
+	background: url(2images/img03.gif) no-repeat;
+	color: #36393D;
+}
+
+#logo2 h1 {
+	padding: 20px 0 0 0;
+}
+
+#logo2 p {
+}
+
+#logo2 a {
+	text-decoration: none;
+	color: #36393D;
+}
+#menu2 {
+	clear: both;
+	height: 40px;
+	background: url(2images/img09.gif) no-repeat right bottom;
+}
+
+#menu2 ul {
+	height: 28px;
+	padding: 12px 0 0 20px;
+	margin-left:600px;
+	background: url(2images/img08.gif) no-repeat left bottom;
+	list-style: none;
+}
+
+#menu2 li {
+	display: inline;
+}
+
+#menu2 a {
+	padding: 0 20px;
+	background: url(2images/img06.gif) no-repeat left center;
+	text-decoration: none;
+	font-weight: bold;
+	color: #36393D;
+}
+
+#menu2 a:hover {
+	text-decoration: underline;
+}
+
+#menu2 .current_page_item a {
+	background: url(2images/img07.gif) no-repeat left center;
+	color: #B42600;
+}
+#content2 {
+	margin:145px 0 0  180px;
+	width: 600px;
+}
+
+.post2 {
+	padding: 20px 0;
+}
+
+.post2 .title {
+	font-size: 2.6em;
+}
+
+.post2 .title a {
+	text-decoration: none;
+}
+
+.post2 .title a:hover {
+	border-bottom: 1px dotted #000000;
+}
+
+.post2 .byline {
+	margin-bottom: 2em;
+}
+
+.post2 .date {
+	display: block;
+	float: left;
+	width: 69px;
+	height: 64px;
+	margin-top: 7px;
+	background: #CCE698 url(images/img14.gif) no-repeat;
+	text-align: center;
+	font-size: 11px;
+	font-weight: bold;
+	color: #BF3600;
+}
+
+.post2 .date .month {
+	display: block;
+	height: 16px;
+	padding: 1px 0 0 0;
+	background: #BF3600 url(images/img14.gif) no-repeat;
+	color: #FFFFFF;
+}
+
+.post2 .date .day {
+	height: 47px;
+	font: bold 36px Georgia, "Times New Roman", Times, serif;
+}
+
+.post2 .date .year {
+	margin-top: -8px;
+	display: block;
+	text-indent: -9999px;
+}
+
+.post2 .entry {
+	margin: 0 20px 0 90px;
+}
+
+.post2 .entry p, .post .entry ol, .post .entry ul {
+	margin-bottom: 1.6em;
+	line-height: 180%;
+	list-style-position: inside;
+}
+
+.post2 .links {
+	height: 22px;
+	padding: 5px 0 0 10px;
+	background: url(images/img15.gif) no-repeat;
+}
+
+.post2 .links a {
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.post2 .links a:hover {
+	text-decoration: underline;
+}
+
+.post2 .links .more {
+	padding-left: 15px;
+	background: url(images/img16.gif) no-repeat 0 5px;
+}
+
+.post2 .links .comments {
+	padding-left: 15px;
+	background: url(images/img17.gif) no-repeat 0 6px;
+}
+
+.post2 .links .rss {
+	padding-left: 15px;
+	background: url(images/img18.gif) no-repeat 1px 6px;
+}
+
+
+        
+
+    </style>
+
+   
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="LeftPanel" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <asp:ContentPlaceHolder id="RightPanel" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

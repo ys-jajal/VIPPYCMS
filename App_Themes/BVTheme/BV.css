@@ -1,0 +1,36 @@
+﻿        .left1
+        {
+             margin-top:144px;          
+          background-color:BlueViolet;
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 13px;
+	        color: #A4E4F5;
+            width:950px;
+            height:1200px;
+            float:left;
+        }
+        #Div1
+        {
+            background-color:BlueViolet;
+        }
+      .left2
+        {
+            background-color:BlueViolet;
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 13px;
+	        color: #666666;
+            width:950px;
+            height:1200px;
+            float:left;
+        }
+        .left3
+        {
+            background-color: BlueViolet;
+	        font-family: Arial, Helvetica, sans-serif;
+	        font-size: 13px;
+	        color: #D1E9A3;
+            width:950px;
+            height:1200px;
+            float:left;
+        }
+    
